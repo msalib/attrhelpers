@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="attrhelpers-msalib",
+    name="attrhelpers",
     version="0.0.1",
     author="Michael Salib",
     author_email="msalib@gmail.com",
