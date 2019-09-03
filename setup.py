@@ -24,7 +24,7 @@ setuptools.setup(
     zip_safe=True,
     keywords=["class", "attribute", "boilerplate"],
     install_requires=["attrs>=17.3.0"],
-    extras_require={"tests": ["pytest>=4.0"]},
+    extras_require={"tests": ["pytest>=4.0", "tox>=3.8.0"]},
     include_package_data=True,
     license='Apache 2',
 )

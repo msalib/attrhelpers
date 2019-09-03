@@ -83,6 +83,10 @@ _mapping_types = {T.Dict: dict,
 
 if sys.version_info >= (3, 7, 0):
     _mapping_types[T.OrderedDict] = collections.OrderedDict
+    for _typemap in (_sequence_types, _mapping_types):
+        _typemap.update(
+            (v, v)
+            for v in list(_typemap.values()))
 
 
 NoneType = type(None)
@@ -112,7 +116,7 @@ def _type_to_validator(type_: TypingType) -> T.Optional[Validator]:
         iterable_type = _sequence_types[origin]
         iterable_validator = attr.validators.instance_of(iterable_type)
         if args:
-            is_tuple = origin is T.Tuple
+            is_tuple = origin is T.Tuple or origin is tuple
             if is_tuple and len(args) == 2 and args[-1] == ...:
                 pass
             elif is_tuple:
