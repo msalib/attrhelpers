@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="attrhelpers",
-    version="0.0.1",
+    version="0.0.2",
     author="Michael Salib",
     author_email="msalib@gmail.com",
     description="Type based validators for attrs",
