@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="attrhelpers-msalib",
-    version="0.0.1",
+    name="attrhelpers",
+    version="0.0.2",
     author="Michael Salib",
     author_email="msalib@gmail.com",
     description="Type based validators for attrs",
